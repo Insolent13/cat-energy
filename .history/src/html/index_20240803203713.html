@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cat Energy</title>
+	<link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body class="page__body">
+	<header class="page__header header">
+		<div class="header__container container">
+			<div class="header__icons-wrapper">
+				<a class="header__logo" href="index.html" tabindex="-1" aria-current="page">
+					<picture>
+						<source type="image/svg+xml" media="(min-width: 1280px)"
+						  srcset="img/logo-cat-max.svg"
+						  width="70" height="59">
+						<source type="image/svg+xml" media="(min-width: 768px)"
+						  srcset="img/logo-cat-med.svg"
+						  width="60" height="50">
+		  
+						<img class="header__logo-image header__logo-image--icon"
+						  src="img/logo-cat-min.svg"
+						  width="33" height="38"
+						  alt="Веселый кот-супергерой">
+					</picture>
+				</a>
+				<a class="header__logo" href="index.html" aria-current="page">
+					<img class="header__logo-image header__logo-image--text"
+					src="img/logo-text.svg"
+					width="101" height="18"
+              alt="Cat Energy на главную страницу">
+				</a>
+			</div>
+			<nav class="header__menu menu" id="main-nav">
+				<div class="menu__popover menu__popover--closed menu__popover--nojs">
+					<button class="menu__toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+						<span class="visually-hidden">Открыть меню</span>
+					</button>
+					<ul class="menu__content-list">
+						<li class="menu__content-item">
+							<a class="menu__content-link menu__content-link--desktop menu__content-link--current" href="index.html">Главная</a>
+						</li>
+						<li class="menu__content-item">
+							<a class="menu__content-link menu__content-link--desktop" href="catalog.html">Каталог продукции</a>
+						</li>
+						<li class="menu__content-item">
+							<a class="menu__content-link menu__content-link--desktop" href="form.html">Подбор программы</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<h1 class="visually-hidden">О магазине кошачьего диетического питания Cat Energy</h1>
+		@@include('blocks/promo.html')
+		@@include('blocks/programs.html')
+		@@include('blocks/advantages.html')
+		@@include('blocks/example.html')
+		<section class="address">
+			<div class="address-wrapper">
+				<h2 class="visually-hidden">Контакты</h2>
+				<div class="address__wrapper">
+					<div class="address__flex-wrapper">
+						<strong class="address__title">Приглашаем к&nbsp;сотрудничеству дилеров!</strong>
+						<a class="address__link" href="https://goo.gl/maps/MYYqY5xRLSDUEHzb8">ул. Большая Конюшенная, д. 19/8 <span class="address__title-city">Санкт-Петербург</span></a>
+					</div>
+				</div>
+				<iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.32085871616114!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1648645933779!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</section>
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

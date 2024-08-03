@@ -1,0 +1,232 @@
+.menu {
+    margin: 0;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: $color-black;
+    background-color: $color-white;
+}
+
+.menu__popover {
+    position: relative;
+    display: block;
+}
+
+.menu__toggle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -47px;
+    right: 5px;
+    z-index: 2;
+    border: none;
+    background-color: $color-white;
+    cursor: pointer;
+  
+    &:hover,
+    &:active {
+      opacity: 0.2;
+    }
+}
+
+// класс для закрытого меню
+.menu__popover--closed .menu__toggle::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: $color-black;
+    box-shadow: 0 8px 0 0 $color-black, 0 16px 0 0 $color-black;
+}
+
+.menu__popover--closed .menu__toggle:active::before {
+    background-color: transparentize($color-black, 0.7);
+    box-shadow:
+      0 8px 0 0 transparentize($color-black, 0.7),
+      0 16px 0 0 transparentize($color-black, 0.7);
+}
+
+// класс для открытого меню
+.menu__popover--opened .menu__toggle {
+    position: absolute;
+    top: -47px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 7px;
+      right: 0;
+      width: 25px;
+      height: 1.5px;
+      background-color: $color-black;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+      }
+    
+      &:active::before,
+      &:active::after {
+        background-color: transparentize($color-black, 0.3);
+    }
+}
+
+.menu__popover--opened .menu__content-list {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: $color-white;
+    width: 100%;
+}
+
+.menu__content-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu__content-link {
+    white-space: nowrap;
+    display: grid;
+    text-align: center;
+    padding: 24px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-black;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+    &:hover {
+        color: transparentize($color-black, 0.6);
+      }
+    
+      &:focus {
+        color: transparentize($color-black, 0.3);
+      }
+}
+
+.menu__content-item {
+    padding: 0;
+    border-bottom: 1px solid $color-border-advantages;
+}
+
+.menu__content-link--current {
+    color: $color-black;
+}
+
+@media (max-width: $mobile-width-only) {
+    .menu__popover--closed .menu__content-list {
+      display: none;
+    }
+
+    .menu__popover--nojs .menu__toggle {
+        display: none;
+    }
+
+    .menu__popover--nojs .menu__content-list {
+        position: static;
+        display: block;
+        min-height: 0;
+    }
+
+    .menu__popover--nojs .menu__content-item {
+        display: block;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .menu {
+      padding: 0;
+      font-weight: 400;
+      text-align: right;
+    }
+
+    .menu__content-list {
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        padding: 0;
+        min-width: 440px;
+    }
+
+    .menu__content-item {
+        border-bottom: none;
+        padding-right: 0;
+        margin-right: 35px;
+    }
+
+    .menu__content-item:last-child {
+        margin-right: 0;
+    }
+    .menu__content-link {
+        display: inline-block;
+        vertical-align: middle;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 133%;
+        padding: 0;
+        padding-top: 18px;
+        padding-bottom: 10px;
+    }
+
+    .menu__content-link--current {
+        padding-bottom: 8px;
+        border-bottom: 2px solid $color-basic-green;
+    }
+
+    .menu__toggle {
+        display: none;
+    }
+
+    .menu__content-link--current:hover,
+    .menu__content-link--current:focus {
+        color: $color-black;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .menu {
+      display: flex;
+      justify-content: end;
+      background-color: transparent;
+    }
+
+    .menu__content-list {
+        min-width: 478px;
+    }
+
+    .menu__toggle {
+        display: none;
+    }
+
+    .menu__content-link {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 150%;
+        color: $color-black;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .menu__content-link--desktop {
+        color: $color-white;
+    }
+
+    
+}

@@ -1,0 +1,32 @@
+.menu {
+    margin: 0;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: $color-black;
+    background-color: $color-white;
+}
+
+.menu__popover {
+    position: relative;
+    display: block;
+}
+
+.menu__toggle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -47px;
+    right: 5px;
+    z-index: 2;
+    border: none;
+    background-color: $color-white;
+    cursor: pointer;
+  
+    &:hover,
+    &:active {
+      opacity: 0.2;
+    }
+  }

@@ -1,0 +1,16 @@
+.menu {
+    margin: 0;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: $color-black;
+    background-color: $color-white;
+}
+
+.menu__popover {
+    position: relative;
+    display: block;
+}
+
