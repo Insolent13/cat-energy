@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HTML Academy: Кэт энерджи</title>
+	<link rel="stylesheet" href="./css/main.css" />
+
+	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body class="page-catalog">
+	<header class="header">
+        <div class="header-wrapper">
+            <div class=" header__logo-wrapper">
+            <a class="header__logo logo-mobile" href="index.html">
+              <div class="logo-mobile__wrapper">
+                <img class="logo-mobile__icon-mobile" width="34" height="38" alt="Наш маскот." src="img/logo_mobile.svg">
+                <img class="logo-mobile__icon-label" width="101" height="18" alt="Логотип «Кэт Энерджи»." src="img/icon_logo_label.svg">
+              </div>
+            </a>
+            <a class="header__logo logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/icon_logo_desktop.svg">
+                <img class="logo__tablet" width="174" height="52" alt="Логотип «Кэт Энерджи»." src="img/icon_logo_tablet.svg">
+              </picture>
+            </a>
+          </div>
+          <nav class="header__menu menu" id="main-nav">
+            <div class="menu__popover menu__popover--closed menu__popover--nojs">
+              <button class="menu__toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+              <ul class="menu__content-list">
+                <li class="menu__content-item">
+                  <a class="menu__content-link" href="index.html">Главная</a>
+                </li>
+                <li class="menu__content-item">
+                  <a class="menu__content-link menu__content-link--current">Каталог продукции</a>
+                </li>
+                <li class="menu__content-item">
+                  <a class="menu__content-link" href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+	<main>
+		<h1 class="visually-hidden">Главная страница магазина кошачьего диетического питания Cat Energy</h1>
+		@@include('blocks/promo.html')
+		@@include('blocks/programs.html')
+		@@include('blocks/advantages.html')
+		@@include('blocks/example.html')
+		@@include('blocks/address.html')
+	</main>
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>
