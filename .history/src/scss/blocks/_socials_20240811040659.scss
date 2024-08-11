@@ -1,0 +1,64 @@
+.socials__list {
+    @include clear-list();
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.socials__link {
+    --icon-color: #{$color-special_grey-2};
+  
+    display: block;
+    width: 28px;
+    height: 22px;
+  
+    cursor: pointer;
+  
+    &:hover {
+      --icon-color: #{$color-accent};
+    }
+  
+    &:active {
+      --icon-color: #{$color-accent};
+      opacity: 0.3;
+    }
+  
+    &:focus-visible {
+      --icon-color: #{$color-accent};
+  
+      outline: 2px solid $color-text-strong;
+      outline-offset: 4px;
+    }
+  
+    &::after {
+      content: "";
+  
+      display: block;
+      width: 100%;
+      height: 100%;
+  
+      background-color: var(--icon-color);
+      mask-image: var(--icon-url);
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+  
+      transition:
+        background-color $transition-basic,
+        opacity $transition-basic;
+    }
+  
+    &--vk {
+      --icon-url: url("./img/svgsprite/sprite.symbol.svg#vk-logo");
+    }
+  
+    &--youtube {
+      --icon-url: url("./img/svgsprite/sprite.symbol.svg#youtube-logo");
+    }
+  
+    &--telegram {
+      --icon-url: url("../../../build/img/");
+    }
+}

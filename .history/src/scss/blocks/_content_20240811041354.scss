@@ -1,0 +1,71 @@
+.content__hero {
+    margin-bottom: 20px;
+  
+    @media #{$on-tablet} {
+      margin-bottom: 0;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 82px;
+    }
+}
+  
+.content__goals {
+    margin-bottom: 23px;
+  
+    @media #{$on-tablet} {
+      margin-bottom: 45px;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 73px;
+    }
+}
+  
+.content__features {
+    margin-bottom: 49px;
+  
+    @media #{$on-tablet} {
+      margin-bottom: 45px;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 83px;
+    }
+}
+  
+.content__catalog {
+    margin-bottom: 27px;
+  
+    @media #{$on-tablet} {
+      margin-bottom: 70px;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 76px;
+    }
+}
+  
+.content__additions {
+    margin-bottom: 35px;
+  
+    @media #{$on-tablet} {
+      margin-bottom: 75px;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 87px;
+    }
+}
+  
+  .content__program-request {
+    margin-bottom: 32px;
+  
+    @media #{$on-tablet} {
+      margin-bottom: 60px;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 79px;
+    }
+}

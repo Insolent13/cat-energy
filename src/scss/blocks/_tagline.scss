@@ -1,0 +1,13 @@
+.tagline {
+    font-family: $font-family-accent;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $color-text-strong;
+    word-break: break-word;
+  
+    @media #{$on-tablet-desktop} {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+    }
+  }

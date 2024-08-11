@@ -1,0 +1,11 @@
+.header {
+    @media #{$on-tablet} {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  
+    @media #{$on-desktop} {
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+  }

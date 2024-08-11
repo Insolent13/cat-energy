@@ -1,0 +1,13 @@
+.title {
+    font-family: $font-family-accent;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $color-text-strong;
+    word-break: break-word;
+  
+    @media #{$on-tablet-desktop} {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }

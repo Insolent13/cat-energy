@@ -1,0 +1,38 @@
+.goals__list {
+    @include clear-list();
+  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media #{$on-tablet} {
+    gap: 30px;
+  }
+
+  @media #{$on-desktop} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+
+.goals__item {
+    --circle-radius: 50px;
+  
+    padding-top: 24px;
+    padding-right: 20px;
+    padding-bottom: 18px;
+    padding-left: 20px;
+    width: 100%;
+  
+    display: grid;
+    grid-template-areas:
+      "icon title"
+      "text text"
+      "link link";
+    grid-template-columns: var(--circle-radius) 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 0 20px;
+  
+    background-color: $color-basic_grey;

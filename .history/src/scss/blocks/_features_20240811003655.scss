@@ -1,0 +1,15 @@
+.features {
+    @media #{$on-tablet} {
+        padding-bottom: 60px;
+        border-bottom: 1px solid $color-light_grey;
+    }
+}
+
+.features__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+  
+    @media #{$on-tablet-desktop} {
+      margin-bottom: 72px;
+    }
+}

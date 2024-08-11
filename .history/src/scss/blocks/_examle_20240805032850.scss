@@ -1,0 +1,20 @@
+.example {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  
+    background-color: #eaeaea;
+
+    @media #{$on-tablet} {
+        padding-top: 0;
+        padding-bottom: 101px;
+        background: linear-gradient(to top, $color-light_grey 462px, transparent 462px);
+      }
+
+      @media #{$on-desktop} {
+        padding-top: 0;
+        padding-bottom: 68px;
+    
+        background: linear-gradient(to bottom, transparent 136px, $color-light_grey 136px);
+      }
+}
+

@@ -1,0 +1,29 @@
+.page__body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  font-family: $font-family-basic;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-special_dark-grey;
+
+  background-color: $color-bg-basic;
+
+  @media #{$on-tablet-desktop} {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.page__header {
+  margin-bottom: 27px;
+
+  @media #{$on-tablet} {
+    margin-bottom: 40px;
+  }
+
+  @media #{$on-desktop} {
+    margin-bottom: 19px;
+  }
+}

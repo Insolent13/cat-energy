@@ -1,0 +1,16 @@
+@include font-face(
+  "Oswald",
+  400,
+  normal,
+  url("../../fonts/oswald/oswaldregular.woff2") format("woff2"),
+  url("../../fonts/oswald/oswaldregular.woff") format("woff")
+);
+@include font-face(
+  "Lato",
+  400,
+  normal,
+  url("../../fonts/lato/Lato-Regular.woff2") format("woff2"),
+  url("../../fonts/lato/Lato-Regular.woff") format("woff")
+);
+
+url("../../../fonts/lato/Lato-Regular.woff") format("woff")

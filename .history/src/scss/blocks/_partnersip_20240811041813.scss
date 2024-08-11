@@ -1,0 +1,18 @@
+.partnership {
+    @media #{$on-desktop} {
+      position: relative;
+  
+      padding-top: 95px;
+      padding-bottom: 106px;
+    }
+}
+
+.partnership__container {
+    @media #{$on-desktop} {
+      background-color: $color-bg-basic;
+    }
+  
+    &--contrast {
+      background-color: $color-bg-basic;
+    }
+}

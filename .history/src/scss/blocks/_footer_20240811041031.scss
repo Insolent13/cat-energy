@@ -1,0 +1,138 @@
+.footer {
+    background-color: $color-basic_grey;
+}
+
+.footer__container {
+    position: relative;
+  
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  
+    @media #{$on-tablet-desktop} {
+      grid-template-columns: minmax(20%, 1fr) auto minmax(20%, 1fr);
+      justify-items: normal;
+      align-items: center;
+      gap: 48px;
+    }
+  
+    @media #{$on-tablet} {
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+  
+    @media #{$on-desktop} {
+      padding-top: 66px;
+      padding-bottom: 66px;
+    }
+}
+
+.footer__logo {
+    width: fit-content;
+    cursor: pointer;
+    transition: opacity $transition-basic;
+  
+    &:focus-visible {
+      outline: 2px solid $color-text-strong;
+      outline-offset: 4px;
+    }
+}
+
+.footer__logo-image {
+    display: block;
+    fill: #111111;
+  
+    &:hover {
+      fill: #3e3e3e;
+    }
+  
+    &:active {
+      fill: #6b6b6b;
+    }
+}
+
+.footer__socials {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    width: 100%;
+    border-top: 1px solid $color-special_grey;
+    border-bottom: 1px solid $color-special_grey;
+  
+    justify-self: center;
+  
+    @media #{$on-tablet-desktop} {
+      padding-top: 0;
+      padding-bottom: 0;
+      width: fit-content;
+      border: none;
+    }
+}
+
+.footer__copyright {
+    width: 100%;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 23px;
+  
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-special_dark-grey;
+    word-break: break-word;
+  
+    cursor: pointer;
+    transition: opacity $transition-basic;
+  
+    &::after {
+      content: "";
+  
+      display: block;
+      width: 27px;
+      height: 34px;
+      flex-shrink: 0;
+  
+      background-color: $color-special_grey-2;
+      mask-image: url("./img/icons/stack.svg#html-academy-logo");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+  
+      transition:
+        background-color $transition-basic,
+        opacity $transition-basic;
+    }
+  
+    &:hover {
+      &::after {
+        background-color: $color-accent;
+      }
+    }
+  
+    &:active {
+      opacity: 0.3;
+  
+      &::after {
+        background-color: $color-accent;
+      }
+    }
+  
+    &:focus-visible {
+      outline: 2px solid $color-text-strong;
+      outline-offset: 4px;
+  
+      &::after {
+        background-color: $color-accent;
+      }
+    }
+  
+    @media #{$on-tablet-desktop} {
+      justify-self: flex-end;
+      justify-content: flex-end;
+      width: fit-content;
+      text-align: right;
+    }
+}
