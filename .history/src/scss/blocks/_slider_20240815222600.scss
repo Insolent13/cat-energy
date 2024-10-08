@@ -1,0 +1,23 @@
+.slider {
+  --left-width: 50%;
+  --icon-color: #{$color-special_grey-2};
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: var(--left-width) 1fr;
+
+  &:has(.slider__control:hover),
+  &:has(.slider__control:focus-visible) {
+    --icon-color: #{$color-accent};
+  }
+
+  &:has(.slider__control:active) {
+    --icon-color: #{$color-accent-2};
+  }
+
+  &:has(.slider__control:disabled) {
+    --icon-color: #{$color-special_grey};
+  }
+}
+

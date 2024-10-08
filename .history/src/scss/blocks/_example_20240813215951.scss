@@ -1,0 +1,281 @@
+.example {
+  padding: 25px 0 40px 0;
+  background-color: #ebebeb;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    padding-bottom: 55px;
+    background-image: linear-gradient(to top, #ebebeb 462px, $color-white 462px);
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding-bottom: 65px;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $width-pre-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+/// Общий контейнер для всей текстовой информации
+
+.example__info-inner {
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 366px 1fr;
+    column-gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    align-self: start;
+    margin-bottom: 0;
+  }
+}
+
+.example__title {
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1/-1;
+    margin-bottom: 63px;
+    font-size: 60px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin: 43px 0 146px;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $special-grey-700;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / -1;
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin: 0 108px 68px 0;
+  }
+}
+
+.example__list {
+  display: grid;
+  max-width: 366px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+
+  @media (max-width: $width-max-mobile) {
+    column-gap: 32px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $width-tablet) {
+    column-gap: 42px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 55px;
+    grid-column: 1 / -1; // Растягиваем информацию на всю ширину
+  }
+}
+
+.example__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+
+
+  @media (max-width: $width-max-mobile) {
+    padding-top: 14px;
+    row-gap: 8px;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding-top: 15px;
+    row-gap: 11px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 14px;
+    border: 1px solid $special-grey-200;
+    border-radius: 3px;
+
+    @media (min-width: $width-tablet) {
+      bottom: 5px;
+      padding: 0 8px;
+    }
+  }
+}
+
+.example__term {
+  position: relative;
+  width: 77px;
+  line-height: 1;
+  color: $special-grey-700;
+  text-transform: lowercase;
+  text-align: center;
+  word-break: break-word;
+  padding: 0 7px;
+
+  @media (max-width: $width-max-mobile) {
+    background-color: $special-grey-100;
+    font-size: 12px;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: auto;
+    max-width: 90%;
+    background-color: $color-white;
+    font-size: 14px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    background-color: $special-grey-100;
+  }
+}
+
+.example__desc {
+  margin: 0;
+  font-family: $font-title;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__total {
+  display: flex;
+  margin: 0;
+  font-family: $font-title;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    justify-content: center;
+  }
+
+  @media (min-width: $width-tablet) {
+    flex-direction: column;
+    row-gap: 9px;
+    align-items: end;
+    font-size: 20px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: (245px + 80px);
+    flex-direction: initial;
+    justify-content: space-between;
+    row-gap: initial;
+  }
+
+  &--desc {
+    margin: 0;
+
+    @media (max-width: $width-max-mobile) {
+      padding-left: 0.3em;
+    }
+  }
+}
+
+.example__images-inner {
+  @media (min-width: $width-tablet) {
+    width: 592px;
+    margin: 0 auto;
+  }
+}
+
+.example__images {
+  margin-bottom: 15px;
+
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    margin-bottom: 25px;
+  }
+}
+
+.example__image {
+  display: none;
+  margin: 0 auto;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+    width: auto;
+    height: 511px;
+    object-fit: cover;
+  }
+
+  &--before {
+    @media (min-width: $width-tablet) {
+      // Читай ниже ...
+      // margin: 0;
+      // margin-right: auto;
+      // border-right: 2px solid rgba($color-white, 0.5);
+      object-position: left;
+    }
+  }
+
+  &--after {
+    @media (min-width: $width-tablet) {
+
+      // Изначально (когда) размер фото было непропопрционально
+      // размерам контейнера по ее краям возникают маргины и при перемещении инпута,
+      // в момент когда ширина ячейки становится шире самого фото,
+      // оно начинает двигаться вслед за граиницей ячейки.
+      // Придумал такой костыль.
+
+      // margin: 0;
+      // margin-left: auto;
+
+      // Это другое! Тут align не работает.
+      // Позиционируем фото справа, иначе при масштабированиии ширины ячейки
+      // оно постоянно позиционируется относительно ее центра.
+
+      object-position: right;
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.example__switcher {
+  @media (max-width: $width-max-mobile) {
+    margin: 0 35px;
+  }
+}

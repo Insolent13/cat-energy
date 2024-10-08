@@ -1,0 +1,46 @@
+<section class="example">
+    <div class="example__wrapper container">
+
+      <!-- Блок с информацией -->
+      <div class="example__info-inner">
+        <h2 class="example__title page__title">Живой пример</h2>
+        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <dl class="example__list ">
+          <div class="example__item">
+            <dt class="example__term">Cнижение веса</dt>
+            <dd class="example__desc">5 кг</dd>
+          </div>
+          <div class="example__item">
+            <dt class="example__term">Затрачено времени</dt>
+            <dd class="example__desc">60 дней</dd>
+          </div>
+        </dl>
+        <dl class="example__total">
+          <dt class="example__total--term">Затраты на питание:</dt>
+          <dd class="example__total--desc">15 000 руб.</dd>
+        </dl>
+      </div>
+
+      <!-- Слайдер - фото котов до и после -->
+      <div class="example__images-inner">
+        <!-- Рекламные фото -->
+        <div class="example__images">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x">
+            <img class="example__image example__image--before" width="280" height="232" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png" alt="Толстый кот до питания кормом">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x">
+            <img class="example__image example__image--after example__image--active" width="280" height="232" src="img/cat-after-mobile.png" srcset="/img/cat-after-mobile@2x.png" alt="Худой кот после питания кормом">
+          </picture>
+        </div>
+        <!-- Переключатели фотографий -->
+        <div class="example__switcher switcher switcher--after">
+          <button class="switcher__button switcher__button--before"><span class="switcher__button--inner">Было</span></button>
+          <input class="switcher__range" type="range" value="50">
+          <button class="switcher__button switcher__button--after"><span class="switcher__button--inner">Стало</span></button>
+        </div>
+      </div>
+
+    </div>
+</section>

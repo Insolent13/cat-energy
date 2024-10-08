@@ -1,0 +1,52 @@
+.switcher {
+    display: grid;
+    column-gap: 13px;
+  
+    @media #{$on-mobile} {
+      grid-template-columns: 49px 1fr 49px;
+    }
+  
+    @media #{$on-mobile} {
+      grid-template-columns: 70px 1fr 70px;
+    }
+  
+    &::before {
+      @media (max-width: $width-max-mobile) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        width: 100%;
+        height: 14px;
+        content: "";
+        background-color: $color-white;
+        border: 1px solid $special-grey-250;
+        border-radius: 6px;
+        padding: 0 6px;
+      }
+    }
+  
+    &::after {
+      @media (max-width: $width-max-mobile) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        content: "";
+        width: calc(50% - 6px);
+        height: 6px;
+        margin: 0 6px;
+        border-radius: 6px;
+        background-color: $basic-green;
+        // Почему то не работает :( оставляю как есть
+        //* P.S. А не работает потому, что на justify-self
+        //* действие transition не распространяется!
+        justify-self: start;
+        transition: justify-self 0.5s ease;
+      }
+    }
+  
+    &--after::after {
+      @media (max-width: $width-max-mobile) {
+        justify-self: end;
+      }
+    }
+  }

@@ -1,0 +1,58 @@
+
+
+        <!-- Слайдер - фото котов до и после -->
+        <div class="example__images-inner">
+            <!-- Рекламные фото -->
+            <div class="example__images">
+                <picture>
+                    <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/cat-slider-before-560-512@1x.webp 1x,
+                    img/cat-slider-before-560-512@2x.webp 2x"
+                    width="560" height="512">
+                    <source type="image/webp"
+                    srcset="img/cat-slider-before-280-256@1x.webp 1x,
+                    img/cat-slider-before-280-256@2x.webp 2x"
+                    width="280" height="256">
+    
+                    <source type="image/png" media="(min-width: 768px)"
+                    srcset="img/cat-slider-before-560-512@1x.png 1x,
+                    img/cat-slider-before-560-512@2x.png 2x"
+                    width="560" height="512">
+    
+                    <img class="example__image example__image--before" loading="lazy"
+                    src="img/cat-slider-before-280-256@1x.png"
+                    srcset="img/cat-slider-before-280-256@2x.png 2x"
+                    width="280" height="256"
+                    alt="Толстый кот Борис до перехода на Cat Energy">
+                </picture>
+                <picture>
+                    <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/cat-slider-after-560-512@1x.webp 1x,
+                    img/cat-slider-after-560-512@2x.webp 2x"
+                    width="560" height="512">
+                    <source type="image/webp"
+                    srcset="img/cat-slider-after-280-256@1x.webp 1x,
+                    img/cat-slider-after-280-256@2x.webp 2x"
+                    width="280" height="256">
+    
+                    <source type="image/png" media="(min-width: 768px)"
+                    srcset="img/cat-slider-after-560-512@1x.png 1x,
+                    img/cat-slider-after-560-512@2x.png 2x"
+                    width="560" height="512">
+    
+                    <img class="example__image example__image--after example__image--active" loading="lazy"
+                    src="img/cat-slider-after-280-256@1x.png"
+                    srcset="img/cat-slider-after-280-256@2x.png 2x"
+                    width="280" height="256"
+                    alt="Стройный кот Борис после питания Cat Energy">
+                </picture>
+            </div>
+            <!-- Переключатели фотографий -->
+             <div class="example__switcher switcher switcher--after">
+                <button class="switcher__button switcher__button--before"><span class="switcher__button--inner">Было</span></button>
+                <input class="switcher__range" type="range" value="50">
+                <button class="switcher__button switcher__button--after"><span class="switcher__button--inner">Стало</span></button>
+            </div>
+        </div>
+    </div>
+</section>

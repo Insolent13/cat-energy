@@ -1,0 +1,313 @@
+.card {
+    padding-top: 22px;
+    padding-bottom: 23px;
+    height: 100%;
+  
+    display: grid;
+    grid-template-areas:
+      "cover name"
+      "cover features"
+      "button button";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto) 1fr;
+
+    @media #{$on-tablet-desktop} {
+        padding-top: 0;
+        padding-bottom: 40px;
+        padding-right: 37px;
+        padding-left: 37px;
+    
+        grid-template-areas:
+          "cover"
+          "name"
+          "features"
+          "button";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto) 1fr;
+    
+        background-color: $color-basic_grey;
+    }
+
+    &--show-more {
+        --icon-size: 30px;
+        --icon-margin-bottom: 23px;
+    
+        padding-top: 25px;
+    
+        grid-template-areas:
+          "icon"
+          "name"
+          "text"
+          "button";
+        grid-template-columns: 1fr;
+    
+        background: transparent;
+    
+        &::before,
+        &::after {
+          content: "";
+    
+          margin-bottom: var(--icon-margin-bottom);
+          grid-area: icon;
+          justify-self: center;
+          align-self: center;
+    
+          width: 2px;
+          height: var(--icon-size);
+    
+          background-color: $color-basic_grey;
+        }
+    
+        &::after {
+          transform: translateX(-50%) rotate(90deg);
+        }
+    
+        @media #{$on-tablet-desktop} {
+          --icon-size: 60px;
+    
+          padding-top: 50px;
+          padding-bottom: 38px;
+          border: 2px solid #f2f2f2;
+        }
+    
+        @media #{$on-tablet} {
+          --icon-margin-bottom: 50px;
+        }
+    
+        @media #{$on-desktop} {
+          --icon-margin-bottom: 40px;
+        }
+    }
+    &--addition {
+        padding-top: 13px;
+        padding-bottom: 17px;
+    
+        grid-template-areas:
+          "name"
+          "features"
+          "button";
+        grid-template-columns: 1fr;
+        align-items: center;
+    
+        background-color: transparent;
+    
+        @media #{$on-tablet} {
+          padding-top: 25px;
+          padding-bottom: 27px;
+    
+          grid-template-areas:
+            "name features"
+            "button button";
+          grid-template-columns: repeat(2, calc(50% - 30px));
+          grid-template-rows: repeat(2, auto);
+          gap: 22px 60px;
+        }
+    
+        @media #{$on-desktop} {
+          padding-top: 15px;
+          padding-bottom: 16px;
+          padding-left: 0;
+          padding-right: 0;
+    
+          grid-template-areas: "name features button";
+          grid-template-columns: 305px 305px 245px;
+          grid-template-rows: auto;
+          gap: 10px 20px;
+        }
+    }
+}
+
+.card__name {
+    margin-top: 0;
+    margin-bottom: 15px;
+    grid-area: name;
+  
+    font-family: $font-family-accent;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $color-special_dark-grey-2;
+    word-break: break-word;
+  
+    @media #{$on-tablet-desktop} {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 24px;
+    }
+  
+    &--show-more {
+      margin-bottom: 8px;
+  
+      text-align: center;
+      color: $color-special_dark-grey-3;
+  
+      @media #{$on-tablet} {
+        margin-bottom: 23px;
+      }
+  
+      @media #{$on-desktop} {
+        margin-bottom: 26px;
+      }
+    }
+  
+    &--addition {
+      margin-bottom: 8px;
+  
+      @media #{$on-tablet-desktop} {
+        margin-bottom: 0;
+  
+        text-align: left;
+      }
+    }
+}
+
+.card__link {
+    display: block;
+    width: fit-content;
+    word-break: break-word;
+  
+    color: $color-special_dark-grey-2;
+    cursor: pointer;
+    transition: opacity $transition-basic;
+  
+    &:hover {
+      opacity: 0.6;
+    }
+  
+    &:active {
+      opacity: 0.3;
+    }
+  
+    &:focus-visible {
+      outline: 2px solid $color-text-strong;
+      outline-offset: 4px;
+    }
+  
+    @media #{$on-tablet-desktop} {
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+.card__name-break {
+    &::after {
+      content: "\A";
+    }
+  
+    &:nth-child(1)::after {
+      @media #{$on-mobile} {
+        white-space: pre;
+      }
+    }
+  
+    &:nth-child(2)::after {
+      @media #{$on-tablet-desktop} {
+        white-space: pre;
+      }
+    }
+}
+
+.card__features-list {
+    margin-top: 0;
+    margin-bottom: 21px;
+    grid-area: features;
+  
+    @media #{$on-tablet-desktop} {
+      margin-bottom: 32px;
+    }
+  
+    &--addition {
+      margin-bottom: 14px;
+  
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 7px 15px;
+  
+      @media #{$on-tablet} {
+        margin-bottom: 0;
+        display: grid;
+        grid-template-columns: 68% 1fr;
+        gap: 10px 30px;
+      }
+  
+      @media #{$on-desktop} {
+        margin-bottom: 0;
+        display: grid;
+        grid-template-columns: 1fr 60px;
+        gap: 10px 20px;
+      }
+    }
+}
+
+.card__feature-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+    font-size: 12px;
+    line-height: 16px;
+  
+    @media #{$on-tablet-desktop} {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #cdcdcd;
+  
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    &--addition {
+      font-size: 14px;
+      line-height: normal;
+  
+      @media #{$on-tablet} {
+        text-align: right;
+      }
+  
+      @media #{$on-tablet-desktop} {
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none;
+  
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+}
+
+.card__feature-key {
+    margin-top: 0;
+    margin-bottom: 0;
+  
+    word-break: break-word;
+}
+
+.card__feature-value {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 15px;
+  
+    word-break: break-word;
+    text-align: right;
+  
+    &--addition {
+      margin-left: 0;
+  
+      flex-grow: 1;
+  
+      text-align: left;
+  
+      @media #{$on-tablet} {
+        text-align: right;
+      }
+    }
+}
+  
+  

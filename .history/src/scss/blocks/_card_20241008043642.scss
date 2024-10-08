@@ -1,0 +1,82 @@
+.card {
+    padding-top: 22px;
+    padding-bottom: 23px;
+    height: 100%;
+  
+    display: grid;
+    grid-template-areas:
+      "cover name"
+      "cover features"
+      "button button";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto) 1fr;
+
+    @media #{$on-tablet-desktop} {
+        padding-top: 0;
+        padding-bottom: 40px;
+        padding-right: 37px;
+        padding-left: 37px;
+    
+        grid-template-areas:
+          "cover"
+          "name"
+          "features"
+          "button";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto) 1fr;
+    
+        background-color: $color-basic_grey;
+    }
+
+    &--show-more {
+        --icon-size: 30px;
+        --icon-margin-bottom: 23px;
+    
+        padding-top: 25px;
+    
+        grid-template-areas:
+          "icon"
+          "name"
+          "text"
+          "button";
+        grid-template-columns: 1fr;
+    
+        background: transparent;
+    
+        &::before,
+        &::after {
+          content: "";
+    
+          margin-bottom: var(--icon-margin-bottom);
+          grid-area: icon;
+          justify-self: center;
+          align-self: center;
+    
+          width: 2px;
+          height: var(--icon-size);
+    
+          background-color: $color-basic_grey;
+        }
+    
+        &::after {
+          transform: translateX(-50%) rotate(90deg);
+        }
+    
+        @media #{$on-tablet-desktop} {
+          --icon-size: 60px;
+    
+          padding-top: 50px;
+          padding-bottom: 38px;
+          border: 2px solid #f2f2f2;
+        }
+    
+        @media #{$on-tablet} {
+          --icon-margin-bottom: 50px;
+        }
+    
+        @media #{$on-desktop} {
+          --icon-margin-bottom: 40px;
+        }
+      }
+    
+}

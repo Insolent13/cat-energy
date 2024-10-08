@@ -1,0 +1,9 @@
+.compare {
+    @media #{$on-tablet} {
+      padding-bottom: 64px;
+    }
+  
+     {
+      padding: 0;
+    }
+}

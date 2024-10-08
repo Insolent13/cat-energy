@@ -1,0 +1,44 @@
+.example {
+  padding: 25px 0 40px 0;
+  background-color: #ebebeb;
+
+  @media #{$on-tablet} {
+    padding: 0;
+    padding-bottom: 55px;
+    background-image: linear-gradient(to top, #ebebeb 462px, #ffffff 462px);
+  }
+
+  @media #{$on-tablet-desktop} {
+    padding-bottom: 65px;
+  }
+}
+
+.example__wrapper {
+  @media #{$on-tablet-desktop} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+/// Общий контейнер для всей текстовой информации
+
+.example__info-inner {
+  @media #{$on-mobile} {
+    margin-bottom: 40px;
+  }
+
+  @media #{$on-tablet-desktop} {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 366px 1fr;
+    column-gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    align-self: start;
+    margin-bottom: 0;
+  }
+}

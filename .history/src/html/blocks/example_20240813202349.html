@@ -1,0 +1,83 @@
+<section class="example">
+    <div class="example__container container">
+        <div class="example__info">
+            <h2 class="example__title title">Живой пример</h2>
+            <p class="example__text">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При&nbsp;этом он не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16 часов в&nbsp;день.</p>
+            <dl  class="example__stats">
+                <div class="example__stats-item">
+                    <dt class="example__stats-description">Снижение <span class="example__stats-description-break"></span> веса</dt>
+                    <dd class="example__stats-number">5&nbsp;
+                        <span aria-hidden="true">кг</span>
+                        <span class="visually-hidden">килограмм</span>
+                    </dd>
+                </div>
+                <div class="example__stats-item">
+                    <dt class="example__stats-description">Затрачено <span class="example__stats-description-break"></span>времени</dt>
+                    <dd class="example__stats-number">60&nbsp;дней</dd>
+                </div>
+                <div class="example__stats-item example__stats-item--summary">
+                    <dt class="example__stats-description example__stats-description--summary">Затраты на&nbsp;питание:</dt>
+                    <dd class="example__stats-number example__stats-number--summary">
+                        <span aria-hidden="true">15&nbsp;000&nbsp;руб.</span>
+                        <span class="visually-hidden">15000 рублей</span>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="example__slider slider">
+            <div class="slider__picture-wrapper slider__picture-wrapper--before">
+                <picture>
+                    <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/cat-slider-before-560-512@1x.webp 1x,
+                    img/cat-slider-before-560-512@2x.webp 2x"
+                    width="560" height="512">
+                    <source type="image/webp"
+                    srcset="img/cat-slider-before-280-256@1x.webp 1x,
+                    img/cat-slider-before-280-256@2x.webp 2x"
+                    width="280" height="256">
+
+                    <source type="image/png" media="(min-width: 768px)"
+                    srcset="img/cat-slider-before-560-512@1x.png 1x,
+                    img/cat-slider-before-560-512@2x.png 2x"
+                    width="560" height="512">
+
+                    <img class="slider__picture slider__picture--before" loading="lazy"
+                    src="g/cat-slider-before-280-256@1x.png"
+                    srcset="images/cat-slider-before-280-256@2x.png 2x"
+                    width="280" height="256"
+                    alt="Толстый кот Борис до перехода на Cat Energy">
+                </picture>
+            </div>
+            <div class="slider__picture-wrapper slider__picture-wrapper--after">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="images/cat-slider-after-560-512@1x.webp 1x,
+                          images/cat-slider-after-560-512@2x.webp 2x"
+                  width="560" height="512">
+                <source type="image/webp"
+                  srcset="images/cat-slider-after-280-256@1x.webp 1x,
+                          images/cat-slider-after-280-256@2x.webp 2x"
+                  width="280" height="256">
+
+                <source type="image/png" media="(min-width: 768px)"
+                  srcset="images/cat-slider-after-560-512@1x.png 1x,
+                          images/cat-slider-after-560-512@2x.png 2x"
+                  width="560" height="512">
+
+                <img class="slider__picture slider__picture--after" loading="lazy"
+                  src="images/cat-slider-after-280-256@1x.png"
+                  srcset="images/cat-slider-after-280-256@2x.png 2x"
+                  width="280" height="256"
+                  alt="Стройный кот Борис после питания Cat Energy">
+              </picture>
+            </div>
+            <!-- Переключатели фотографий -->
+            <div class="example__switcher switcher switcher--after">
+                <button class="switcher__button switcher__button--before"><span class="switcher__button--inner">Было</span></button>
+                <input class="switcher__range" type="range" value="50">
+                <button class="switcher__button switcher__button--after"><span class="switcher__button--inner">Стало</span></button>
+            </div>
+        </div>
+    </div>
+</section>

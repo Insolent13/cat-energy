@@ -1,0 +1,103 @@
+.switcher {
+    display: grid;
+    column-gap: 13px;
+  
+    @media #{$on-mobile} {
+      grid-template-columns: 49px 1fr 49px;
+    }
+  
+    @media (min-width: $width-tablet) {
+      grid-template-columns: 70px 1fr 70px;
+    }
+  
+    &::before {
+        @media #{$on-mobile} {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        width: 100%;
+        height: 14px;
+        content: "";
+        background-color: #000000;
+        border: 1px solid #cdcdcd;
+        border-radius: 6px;
+        padding: 0 6px;
+      }
+    }
+  
+    &::after {
+      @media #{$on-mobile} {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        align-self: center;
+        content: "";
+        width: calc(50% - 6px);
+        height: 6px;
+        margin: 0 6px;
+        border-radius: 6px;
+        background-color: #68b738;
+        justify-self: start;
+        transition: justify-self 0.5s ease;
+      }
+    }
+  
+    &--after::after {
+      @media #{$on-mobile} {
+        justify-self: end;
+      }
+    }
+}
+
+.switcher__button {
+    padding: 5px 0;
+    border: none;
+    background-color: transparent;
+    font-family: $font-title;
+    text-transform: uppercase;
+  
+    @media (max-width: $width-max-mobile) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    @media (min-width: $width-tablet) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+    // Компенсация вертикального сдвига строки из-за отключения нижнего бордера
+    &:active {
+      margin-top: -1px;
+    }
+  
+    &--before {
+      grid-column: 1 / 2;
+    }
+  
+    &--after {
+      grid-column: 3 / 4;
+    }
+  
+    // Вкладываю внутренний контейнер в button, чтобы оформить для текста
+    // нижний бордер строго на ширину текста, а не на всю ширину кнопки.
+  
+    &--inner {
+      display: inline-block;
+  
+      @media (min-width: $width-tablet) {
+        border-bottom: 1px dotted rgba($color-black, 0.25);
+  
+        .switcher__button:hover & {
+          border-bottom: 1px solid rgba($color-black, 0.4);
+        }
+  
+        .switcher__button:active & {
+          border-bottom: none;
+        }
+      }
+    }
+}

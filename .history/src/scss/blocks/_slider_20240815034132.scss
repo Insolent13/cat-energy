@@ -1,0 +1,27 @@
+.slider {
+    --left-width: 50%;
+    --icon-color: #{$color-special_grey-2};
+  
+    position: relative;
+  
+    display: grid;
+    grid-template-columns: var(--left-width) 1fr;
+}
+
+.slider__picture-wrapper {
+    display: flex;
+    overflow: hidden;
+  
+    &--before {
+      justify-content: flex-start;
+    }
+  
+    &--after {
+      justify-content: flex-end;
+    }
+}
+
+.slider__picture {
+    display: block;
+    max-width: none;
+}

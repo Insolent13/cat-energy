@@ -1,0 +1,122 @@
+.slider {
+    --left-width: 50%;
+    --icon-color: #{$color-special_grey-2};
+  
+    position: relative;
+  
+    display: grid;
+    grid-template-columns: var(--left-width) 1fr;
+}
+
+.slider__picture-wrapper {
+    display: flex;
+    overflow: hidden;
+  
+    &--before {
+      justify-content: flex-start;
+    }
+  
+    &--after {
+      justify-content: flex-end;
+    }
+}
+
+.slider__picture {
+    display: block;
+    max-width: none;
+}
+
+.slider__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 2px;
+  z-index: 1;
+
+  @media #{$on-tablet} {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  @media #{$on-desktop} {
+    margin-top: 33px;
+  }
+}
+
+.slider__btn {
+  margin: 0 20px;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+  color: #111111;
+  cursor: pointer;
+  user-select: none;
+
+  @media #{$on-tablet} {
+    padding: 6px 0;
+    font-size: 20px;
+    line-height: 1;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      border-bottom-style: solid;
+      color: #68b738;
+    }
+
+    &:active {
+      border-bottom: 0;
+    }
+  }
+}
+
+.slider__scale {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 6px;
+  width: 85px;
+  height: 14px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+
+  @media #{$on-tablet} {
+    padding: 4px 0;
+    width: 428px;
+    height: 6px;
+    background-color: #cdcdcd;
+    border-color: #cdcdcd;
+  }
+}
+
+.slider__grip {
+  flex-shrink: 0;
+  display: block;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #68;
+  cursor: pointer;
+  transition: margin-left 0.35s ease-out;
+
+  @include tablet {
+    margin-left: calc(50% - 17px);
+    width: 34px;
+    height: 34px;
+    background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);
+    border: 1px solid $border-grey;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid $green;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

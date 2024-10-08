@@ -1,0 +1,15 @@
+$gradient-tablet: linear-gradient(to bottom, #ffffff 27%, #eaeaea 27%);
+
+.slider {
+  @media #{$on-tablet} {
+    position: relative;
+    padding-bottom: 0;
+    background-image: $gradient-tablet;
+  }
+
+  @media #{$on-tablet} {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+}

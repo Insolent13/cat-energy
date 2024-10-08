@@ -1,0 +1,19 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 34px;
+
+    @media #{$on-tablet} {
+        margin: 0 -30px;
+        background-image: linear-gradient(#ffffff 0, #ffffff 180px, #f2f2f2 180px, #f2f2f2 100%);
+        overflow: hidden;
+    }
+
+    @media #{$on-desktop} {
+        padding-bottom: 35px;
+        margin: 0;
+        background-image: linear-gradient(#ffffff 0, #ffffff 200px, #f2f2f2 200px,  100%);
+        overflow: visible;
+    }
+}

@@ -1,0 +1,14 @@
+.example {
+  padding: 25px 0 40px 0;
+  background-color: #ebebeb;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    padding-bottom: 55px;
+    background-image: linear-gradient(to top, #ebebeb 462px,  462px);
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding-bottom: 65px;
+  }
+}

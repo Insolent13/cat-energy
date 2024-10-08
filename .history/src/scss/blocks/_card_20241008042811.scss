@@ -1,0 +1,13 @@
+.card {
+    padding-top: 22px;
+    padding-bottom: 23px;
+    height: 100%;
+  
+    display: grid;
+    grid-template-areas:
+      "cover name"
+      "cover features"
+      "button button";
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, auto) 1fr;
+}

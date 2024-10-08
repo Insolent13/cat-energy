@@ -1,0 +1,14 @@
+.switcher {
+  display: grid;
+  column-gap: 13px;
+
+  @media #{$on-mobile} {
+    grid-template-columns: 49px 1fr 49px;
+  }
+
+  @media #{$on-tablet} {
+    grid-template-columns: 70px 1fr 70px;
+  }
+
+  
+}

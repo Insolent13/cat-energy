@@ -1,0 +1,9 @@
+.compare {
+     {
+      padding-bottom: 64px;
+    }
+  
+    @media (min-width: @desktop-width) {
+      padding: 0;
+    }
+}

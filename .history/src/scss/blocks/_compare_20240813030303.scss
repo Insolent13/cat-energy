@@ -1,0 +1,29 @@
+.compare {
+    @media #{$on-tablet} {
+      padding-bottom: 64px;
+    }
+  
+    @media #{$on-desktop} {
+      padding: 0;
+    }
+}
+
+.compare__list {
+    width: 310px;
+    margin: 0 auto;
+    position: relative;
+    height: 240px;
+    margin-bottom: 13px;
+    .animation();
+  
+    @media #{$on-tablet} {
+      .wrap(@tablet);
+      height: 520px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+  
+     {
+      margin-bottom: 30px;
+    }
+  }

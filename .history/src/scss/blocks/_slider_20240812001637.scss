@@ -1,0 +1,12 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 34px;
+
+    @media #{$on-tablet} {
+        margin: 0 30px;
+        background-image: linear-gradient(#ffffff 0, #ffffff 180px, #f2f2f2 180px, $grey 100%);
+        overflow: hidden;
+    }
+}

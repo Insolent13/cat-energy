@@ -1,0 +1,38 @@
+$gradient-tablet: linear-gradient(to bottom, #ffffff 27%, #eaeaea 27%);
+
+.slider {
+  @media #{$on-tablet} {
+    position: relative;
+    padding-bottom: 0;
+    background-image: $gradient-tablet;
+  }
+
+  @media #{$on-desktop} {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+}
+
+.slider__list {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+
+  @media #{$on-tablet} {
+    position: relative;
+    display: block;
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  @media #{$on-desktop} {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: auto;
+    width: 690px;
+    margin: 0;
+  }
+}

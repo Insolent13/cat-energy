@@ -1,0 +1,134 @@
+.example {
+  padding: 25px 0 40px 0;
+  background-color: #ebebeb;
+
+  @media #{$on-tablet} {
+    padding: 0;
+    padding-bottom: 55px;
+    background-image: linear-gradient(to top, #ebebeb 462px, #ffffff 462px);
+  }
+
+  @media #{$on-tablet-desktop} {
+    padding-bottom: 65px;
+  }
+}
+
+.example__wrapper {
+  @media #{$on-tablet-desktop} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+/// Общий контейнер для всей текстовой информации
+
+.example__info-inner {
+  @media #{$on-mobile} {
+    margin-bottom: 40px;
+  }
+
+  @media #{$on-tablet} {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 366px 1fr;
+    column-gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media #{$on-tablet-desktop} {
+    align-self: start;
+    margin-bottom: 0;
+  }
+}
+
+.example__title {
+  @media #{$on-mobile} {
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @media #{$on-tablet} {
+    grid-column: 1/-1;
+    margin-bottom: 63px;
+    font-size: 60px;
+  }
+
+  @media #{$on-tablet-desktop} {
+    margin: 43px 0 146px;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #444444;
+
+  @media #{$on-tablet-desktop} {
+    grid-column: 1 / -1;
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media #{$on-tablet-desktop} {
+    margin: 0 108px 68px 0;
+  }
+}
+
+.example__list {
+  display: grid;
+  max-width: 366px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+
+  @media #{$on-mobile} {
+    column-gap: 32px;
+    margin-bottom: 20px;
+  }
+
+  @media #{$on-tablet} {
+    column-gap: 42px;
+  }
+
+  @media #{$on-tablet-desktop} {
+    margin-bottom: 55px;
+    grid-column: 1 / -1; // Растягиваем информацию на всю ширину
+  }
+}
+
+.example__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+
+
+  @media #{$on-mobile} {
+    padding-top: 14px;
+    row-gap: 8px;
+  }
+
+  @media #{$on-tablet} {
+    padding-top: 15px;
+    row-gap: 11px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 14px;
+    border: 1px solid ;
+    border-radius: 3px;
+
+    @media #{$on-tablet} {
+      bottom: 5px;
+      padding: 0 8px;
+    }
+  }
+}
