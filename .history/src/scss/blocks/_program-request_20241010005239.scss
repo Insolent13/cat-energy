@@ -1,0 +1,19 @@
+.program-request {
+    @media #{$on-tablet} {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+}
+
+.program-request__title {
+    margin-top: 0;
+    margin-bottom: 37px;
+  
+    @media #{$on-tablet} {
+      margin-bottom: 54px;
+    }
+  
+    @media #{$on-desktop} {
+      margin-bottom: 55px;
+    }
+}
